@@ -1,0 +1,127 @@
+<section class="col-md-12  text-center" ng-controller = "CentreController">
+    <div class="col-md-12 mt-4">
+        <div class="row">
+            <div class="col-md-2" style="height: 55%; background-color: #00bfff">
+                <img id="img_menu" src="images/doctor-dog.jpg">
+                <div class="menu">
+                    <h3 class="mt-3 ml-5" >Centre</h3>
+                </div>
+                <div class="menu" style="margin-top: 140%; margin-left: 40%">
+                    <a class="mt-1" href="#!/">Home</a>
+                </div>
+            </div>
+            <div id="centreForm" class="col-md-10 text-center">
+                <div class="col-md-12 d-flex" style="background-color: #00bfff">
+                    <div class="col-md-2 d-flex">
+                        <img src="http://southamptonhospitalschool.co.uk/wp-content/uploads/2018/03/Hospital-Icon.png" alt="" style="height: 100px; width: auto">
+                        <h3 class="mt-3 ml-4" >Centre</h3>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-5">
+                        <a class="ml-2 text-white" href="">Dashboard</a>
+                        <a class="ml-2 text-white" href="">Chat</a>
+                        <a class="ml-2 text-white" href="">Form</a>
+                        <a class="ml-2 text-white" href="">Calendar</a>
+                    </div>
+                </div>
+                <h1 class="mt-3">Centre Page </h1>
+                <div class="col-md-12 col-md-offset-2 text-center">
+                    <div class="col-md-12 errors mt-5 mb-5" ng-show="fullInnput">
+                        <i class="fa fa-info-circle icon" ></i>
+                        <span class="ml-3" ng-style="myError" style="color: red">{{centres.message}}</span>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label>Username</label>
+                                <input type="text" class="form-control input-md text-center" placeholder="example@gmail.com" ng-model="check.email">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label>Password</label>
+                                <input type="text" class="form-control input-md text-center" placeholder="Enter password of centre" ng-model="check.password">
+                            </div>
+                            <a  style="margin-left: 300px" href="#!ForgotPasswordC/?">Forgot password?</a>
+
+                            <div class="form-group col-md-4">
+                                <label>Log In</label>
+                                <!--<button type="button" class="btn btn-success btn-md mt-1 ml-1" ng-click="checkCenters()"></button>-->
+                                <a id="a" href="" ng-click="checkCentres()" class="btn btn-md mt-1 ml-1"  style="background-color: #00bfff; color: white;">Log In</a>
+                            </div>
+                        </div>
+                    </form>
+                    <h4>Registration</h4>
+                    <!-- FORM TO CREATE Centre -->
+                    <div id="expert-form" class="jumbotron text-center">
+                        <div class="col-sm-12 col-md-offset-2 text-center">
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>Clinical Name</label>
+                                        <!-- BIND THIS VALUE TO centre IN ANGULAR -->
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter name of centre" ng-model="centre.name">
+                                        <span class="err" style="color:red">{{errors.nameErr}}</span>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label>Owner name</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter owner's name of centre" ng-model="centre.owner">
+                                        <span class="err" style="color: red">{{errors.ownerErr}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>Email</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="example@gmail.com" ng-model="centre.email">
+                                        <span class="err" style="color: red">{{errors.emailErr}}</span>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label>Owner's Email</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter owner's email of centre" ng-model="centre.ownerEmail">
+                                        <span class="err" style="color: red">{{errors.ownerEmailErr}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>Password</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter password of centre" ng-model="centre.password">
+                                        <span class="err" style="color: red">{{errors.passwordErr}}</span>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter address of centre" ng-model="centre.address">
+                                        <span class="err" style="color: red">{{errors.addressErr}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>Phone of centre</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter phone of centre" ng-model="centre.phone">
+                                        <span class="err" style="color: red">{{errors.phoneErr}}</span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Phone</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter owner's phone of centre" ng-model="centre.ownerPhone">
+                                        <span class="err" style="color: red">{{errors.ownerPhoneErr}}</span>
+                                    </div>
+                                </div>
+                                <label>Picture</label>
+                                <div class="form-group">
+                                    <input type="file"  id="centreImage" class="form-control input-md text-center" name="file_upload">
+                                    <span class="err" style="color: red">{{errors.originalnameErr}}</span>
+                                </div>
+                                <button type="button" class="btn btn-md mt-1 "  ng-click="addCenters()" style="background-color: #00bfff">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

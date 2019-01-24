@@ -1,0 +1,67 @@
+<section class="col-md-12  text-center" ng-controller = "ProfilePatientController">
+    <div class="row">
+        <div class="col-md-12 text-center" style="margin-left:500px">
+            <a href="" ng-click="logOut()" class="btn btn-success btn-md mt-1 ml-1">Log Out</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2" style="height: 70%">
+            <img id="img_menu" src="images/doctor-dog.jpg" style="width:150px;height:300px">
+            <div class="menu">
+            <h3 class="mt-3 ml-5" >Patient</h3>
+                <a class="mt-3" href="#!/">Home</a>
+            <a class="mt-3" href="#!/dashboard">Chart</a>
+            <a class="mt-3" href="#!/patient">Form</a>
+            <a class="mt-3" href="#!/calendar">Calendar</a>
+            <a  class="mt-3" ng-href="#!/singleExpert?{{d._id}}"><p>Your expert</a>
+
+        </div>
+        </div>
+        <div class="col-md-5">
+                <img src="./images/patients/{{profile.image}}" style="width:250px;height:200px;border-radius:10px;border:3px">
+            </div>
+            <div class="col-md-5">
+                <h1>{{profile.fullname}}</h1>
+                <p>{{profile.phone}}</p>
+                <p>{{profile.animals}}</p>
+                <p>{{profile.address}}</p>
+                <!--<a  ng-href="#!/singleExpert?{{d._id}}"><p>Your expert {{d.firstname}}</p></a>-->
+                <a href="" ng-click="anketaPatient(profile._id)">Show anketa</a>
+                <a href="" ng-click="deletePatient(profile._id)">Delete</a>
+                <a  ng-href="#!/updatePatient?{{profile._id}}">Edit</a>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h6>{{anketa[0].vaccine_name}}</h6>
+            <h6>{{anketa[0]. vaccine_date}}</h6>
+            <h6>{{anketa[0].second_vaccine_name}}</h6>
+            <h6>{{anketa[0].second_vaccine_date}}</h6>
+            <h6>{{anketa[0].disease}}</h6>
+            <h6>{{anketa[0].prescription}}</h6>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-12">
+            <h1 class="text-center">
+                MongoChat
+                <!--<button id="clear" class="btn btn-danger">Clear</button>-->
+            </h1>
+            <div id="status"></div>
+            <div id="chat">
+                <input type="text" id="username" ng-value="usernamed" class="form-control" placeholder="Enter name...">
+                <br>
+                <div class="card">
+                    <div id="messages" class="card-block">
+
+                    </div>
+                </div>
+                <br>
+                <textarea  ng-keydown="send()" id="textarea" class="form-control" placeholder="Enter message..."></textarea>
+                <!--<button >send</button>-->
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,37 @@
+{
+  "name": "mean-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-bootstrap-calendar": "^1.0.0",
+    "angular-chart.js": "^1.1.1",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.3",
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.10",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "nodemailer": "^5.1.1",
+    "nodemon": "^1.18.6",
+    "objectid": "^3.2.1",
+    "port": "^0.8.1",
+    "save": "^2.3.2",
+    "socket.io": "^2.2.0",
+    "tui-calendar": "^1.8.0",
+    "upload-file": "^1.2.0",
+    "zingchart": "^2.8.3"
+  }
+}

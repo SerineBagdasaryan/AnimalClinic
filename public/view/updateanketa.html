@@ -1,0 +1,93 @@
+<div class="jumbotron text-center" ng-controller = "UpdateanketaController">
+    <p>{{single_experts.name}}</p>
+    <p>{{single_experts.lastname}}</p>
+    <p>{{patients.vaccine_name}}</p>
+    <!--<img src="./image/{{ single_experts.image}}" style="width: 80px;height: 80px">-->
+
+
+    <form name="myForm" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="vaccine_name">Received vaccine: </label>
+            <input ng-model="animal.vaccine_name" type="text" class="form-control" id="vaccine_name" placeholder="Enter name of vaccine" name="vaccine_name" style="width: 400px">
+        </div>
+
+        <div class="form-group">
+            <label for="vaccine_date">Date of received vaccine: </label>
+            <input ng-model="animal.vaccine_date" type="date" class="form-control" id="vaccine_date" placeholder="Enter date of vaccine " name="vaccine_date" style="width: 400px">
+        </div>
+
+        <div class="form-group">
+            <label for="second_vaccine_name">Name of second vaccine: </label>
+            <input ng-model="animal.second_vaccine_name" type="text" class="form-control" id="second_vaccine_name" placeholder="Enter date of second vaccine " name="second_vaccine_name" style="width: 400px">
+        </div>
+
+        <div class="form-group">
+            <label for="second_vaccine_date">Date of second vaccine: </label>
+            <input ng-model="animal.second_vaccine_date" type="date" class="form-control" id="second_vaccine_date" placeholder="Enter date of second vaccine" name="second_vaccine_date" style="width: 400px">
+        </div>
+
+        <div class="form-group shadow-textarea ">
+            <label for="disease">Disease of animal:</label>
+            <textarea class="form-control z-depth-1" ng-model="animal.disease" id="disease" rows="3" placeholder="Enter disease of animal" style="width: 400px"></textarea>
+        </div>
+
+        <div class="form-group shadow-textarea ">
+            <label for="prescription">Shadow and placeholder</label>
+            <textarea class="form-control z-depth-1" ng-model="animal.prescription" id="prescription" rows="3" placeholder="Enter prescription of animal"style="width: 400px"></textarea>
+        </div>
+
+
+        <div id="update">
+            <button  type="submit" ng-click="updateanketa()" class="btn btn-warning">PatientAnketa</button>
+        </div>
+    </form>
+
+</div>
+
+
+<!--<div class="jumbotron text-center" ng-controller = "patientAnketaController">-->
+    <!--<p>{{single_experts.name}}</p>-->
+    <!--<p>{{single_experts.lastname}}</p>-->
+    <!--&lt;!&ndash;<img src="./image/{{ single_experts.image}}" style="width: 80px;height: 80px">&ndash;&gt;-->
+
+
+    <!--<form name="myForm" enctype="multipart/form-data">-->
+
+        <!--<div class="form-group">-->
+            <!--<label for="vaccine_name">Received vaccine: </label>-->
+            <!--<input ng-model="animal.vaccine_name" type="text" class="form-control" id="vaccine_name" placeholder="Enter name of vaccine" name="vaccine_name">-->
+        <!--</div>-->
+
+        <!--<div class="form-group">-->
+            <!--<label for="vaccine_date">Date of received vaccine: </label>-->
+            <!--<input ng-model="animal.vaccine_date" type="date" class="form-control" id="vaccine_date" placeholder="Enter date of vaccine " name="vaccine_date">-->
+        <!--</div>-->
+
+        <!--<div class="form-group">-->
+            <!--<label for="second_vaccine_name">Name of second vaccine: </label>-->
+            <!--<input ng-model="animal.second_vaccine_name" type="text" class="form-control" id="second_vaccine_name" placeholder="Enter date of second vaccine " name="second_vaccine_name">-->
+        <!--</div>-->
+
+        <!--<div class="form-group">-->
+            <!--<label for="second_vaccine_date">Date of second vaccine: </label>-->
+            <!--<input ng-model="animal.second_vaccine_date" type="date" class="form-control" id="second_vaccine_date" placeholder="Enter date of second vaccine" name="second_vaccine_date">-->
+        <!--</div>-->
+
+        <!--<div class="form-group shadow-textarea ">-->
+            <!--<label for="disease">Disease of animal:</label>-->
+            <!--<textarea class="form-control z-depth-1" ng-model="animal.disease" id="disease" rows="3" placeholder="Enter disease of animal"></textarea>-->
+        <!--</div>-->
+
+        <!--<div class="form-group shadow-textarea ">-->
+            <!--<label for="prescription">Shadow and placeholder</label>-->
+            <!--<textarea class="form-control z-depth-1" ng-model="animal.prescription" id="prescription" rows="3" placeholder="Enter prescription of animal"></textarea>-->
+        <!--</div>-->
+
+
+        <!--<div id="update">-->
+            <!--<button  type="submit" ng-click="patientAnketa()" class="btn btn-warning">PatientAnketa</button>-->
+        <!--</div>-->
+    <!--</form>-->
+
+<!--</div>-->

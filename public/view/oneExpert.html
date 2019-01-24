@@ -1,0 +1,388 @@
+<section class="col-md-12  text-center" ng-controller = "ProfileExpertController">
+    <button class="btn btn-success" ng-click = "logOut()" style="margin-left: 900px">Log Out</button>
+    <div class="col-md-12 jumbotron" >
+        <div class="row">
+            <div class="col-md-2" style="height: 55%; background-color: #00bfff">
+                <img id="img_menu" src="images/doctor-dog.jpg" style="width:150px;height:200px">
+                <div class="menu">
+                    <h3 class="mt-3 ml-5" >Expert</h3>
+                    <!--<button type="button" class="btn btn-primary mt-1" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" style="width: 250px; border: none;">@Messages</button>-->
+                    <a class="mt-4" href="#!/dashboardExpert">Chart</a>
+                    <!-- <a class="mt-4" href="">Chat</a> -->
+                    <a class="mt-4" href="#!/expert">Form</a>
+                    <a class="mt-4" href="#!/calendar">Calendar</a>
+                    <a class="mt-4" href="#!/patientAdd">PatientAdd</a>
+                    <a class="mt-1" href="#!/">Home</a>
+
+                </div>
+            </div>
+            <div class="col-md-5 d-flex">
+                    <div class="mt-3 ml-5">
+                        <img id="changeImg" src="images/experts/{{profile.image}}" style="width:200px;height:200px;border-radius:10px;border:3px;margin-right: 700px">
+                    </div>
+                <div class="form-group">
+                        <input type="file" style="width: 125px; margin-top: 20px; margin-left: 84px; display: none;"  id="image" class="form-control input-md text-center" name="file">
+                    </div>
+
+                    <button class="btn btn-success btn-md mt-4" style="margin-left: 25%;" ng-click="changeImg()">Change image</button>
+            </div>
+
+
+            <!--<div class="col-md-10 d-flex">-->
+
+            <!--<div class="" style="width: 300px; height: 430px; border: 1px solid white">-->
+            <!--<div class="mt-3 ml-5">-->
+            <!--<img id="changeImg" src="imagess/experts/{{data.image}}" style="width: 200px; height: 200px; border: 5px solid gray; border-radius: 50%; ">-->
+            <!--</div>-->
+
+
+            <!--<div class="form-group">-->
+            <!--<input type="file" style="width: 125px; margin-top: 20px; margin-left: 84px; display: none;"  id="image" class="form-control input-md text-center" name="file">-->
+            <!--</div>-->
+
+            <!--<button class="btn btn-success btn-md mt-4" style="margin-left: 25%;" ng-click="changeImg()">Change image</button>-->
+            <!--</div>-->
+
+            <!--<div class="ml-5" style="width: 1000px; height: 430px; border: 1px solid white">-->
+            <!--</div>-->
+
+            <!--</div>-->
+
+            <div class="col-md-5">
+                Your patients {{z}} %
+                <h1>{{profile.firstname}}</h1>
+                <p>{{profile.lastname}}</p>
+                <p>{{profile.phone}}</p>
+                <p>{{profile.address}}</p>
+            </div>
+        </div>
+
+       <div class="row">
+         <div class="col-md-6" ng-repeat="patient in patients" style="margin-top: 100px">
+                   <img src="./images/patients/{{patient.image}}" style="width:200px;height:150px;border-radius:10px;border:3px">
+                        <h2>Your patients</h2>
+                        <a ng-href="#!singlePatient/?{{patient._id}}">{{patient.fullname}}</a>
+                        <a  style="color:blue;" ng-href="#!/updatePatient/?{{patient._id}}">Edit</a>
+                        <a href="" ng-click="deletePatient(patient._id)">Delete</a>
+                        <a  style="color:blue;" ng-href="#!/anketa/?{{patient._id}}">Create Anceta</a>
+                        <a href="" ng-click="anketaPatient(patient._id)">Show anketa</a>
+                        <p>{{patient.phone}}</p>
+                        <p>{{patient.username}}</p>
+              </div>
+           <div class="col-md-6">
+            <h6>{{anketa[0].vaccine_name}}</h6>
+            <a ng-show="hide" style="color:blue;" ng-href="#!/updateanketa/?{{anketa[0]._id}}">Edit</a>
+            <a ng-show="show" href="" ng-click="delete(anketa[0]._id)">Delete</a>
+        </div>
+        </div>
+
+
+
+         <!--{{s}}-->
+         <!--</div>-->
+        <!--{{ ResData}}-->
+        <!--<div class="col-md-2 mt-5">-->
+            <!--<h5 style="margin-right: 60%">{{'Dear doctor you have ' + our_pacients.length + ' clinic ancheta of pets'}}</h5>-->
+            <!--<div class="row  mt-2 text-light"   ng-repeat="(index, pacient) in patients">-->
+                <!--<div class="col-sm-6">-->
+                    <!--<p style="color: #8fcdd8;">{{index+1}}</p>-->
+                    <!--<p style="color: #8fcdd8;"><span style="color: #8fcdd8;">Name: </span>{{pacient.fullname}}</p>-->
+
+                <!--</div>-->
+                <!--<div class="col-sm-6">-->
+                    <!--<button type="button" ng-click="delete(pacient._id,index)" class="btn btn-primary btn ml-3 mr-3">Delete ancheta</button></br></br>-->
+                    <!--&lt;!&ndash; Button to Open the Modal &ndash;&gt;-->
+                    <!--<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ng-click="update(pacient._id)">-->
+                        <!--Add ancheta-->
+                    <!--</button>-->
+                    <!--<p><span style="color: #8fcdd8;">Received vaccine: </span>{{pacient.anketa[0].vaccine_name }}</p>-->
+                    <!--<p><span style="color: #8fcdd8;">Date of received vaccine: </span>{{pacient.anketa[0].vaccine_date }}</p>-->
+                    <!--<p><span style="color: #8fcdd8;">DName of second vaccine: </span>{{pacient.anketa[0].second_vaccine_name}}</p>-->
+                    <!--<p><span style="color: #8fcdd8;">Date of second vaccine: </span>{{pacient.second_vaccine_date}}</p>-->
+                    <!--<p><span style="color: #8fcdd8;">Animal disease: </span>{{pacient.disease}}</p>-->
+                    <!--<p><span style="color: #8fcdd8;">Prescription of disease: </span>{{pacient.prescription}}</p>-->
+                <!--</div>-->
+            <!--</div>        </div>-->
+
+
+        <!--&lt;!&ndash; The Modal &ndash;&gt;-->
+        <!--<div class="modal fade" id="myModal">-->
+            <!--<div class="modal-dialog">-->
+                <!--<div class="modal-content">-->
+
+                    <!--&lt;!&ndash; Modal Header &ndash;&gt;-->
+                    <!--<div class="modal-header">-->
+                        <!--<h4 class="modal-title">Modal Heading</h4>-->
+                        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                    <!--</div>-->
+
+                    <!--&lt;!&ndash; Modal body &ndash;&gt;-->
+                    <!--&lt;!&ndash; Modal body &ndash;&gt;-->
+                    <!--<div class="modal-body">-->
+                        <!--<form name="myForm" enctype="multipart/form-data">-->
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="vaccine_name">Received vaccine: </label>-->
+                                <!--<input ng-model="ancheta.vaccine_name" type="text" class="form-control" id="vaccine_name" placeholder="Enter name of vaccine" name="vaccine_name">-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="vaccine_date">Date of received vaccine: </label>-->
+                                <!--<input ng-model="ancheta.vaccine_date" type="date" class="form-control" id="vaccine_date" placeholder="Enter date of vaccine " name="vaccine_date">-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="second_vaccine_name">Name of second vaccine: </label>-->
+                                <!--<input ng-model="ancheta.second_vaccine_name" type="text" class="form-control" id="second_vaccine_name" placeholder="Enter date of second vaccine " name="second_vaccine_name">-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="second_vaccine_date">Date of second vaccine: </label>-->
+                                <!--<input ng-model="ancheta.second_vaccine_date" type="date" class="form-control" id="second_vaccine_date" placeholder="Enter date of second vaccine" name="second_vaccine_date">-->
+                            <!--</div>-->
+
+
+
+                            <!--<div class="form-group shadow-textarea ">-->
+                                <!--<label for="disease">Disease of animal:</label>-->
+                                <!--<textarea class="form-control z-depth-1" ng-model="ancheta.disease" id="disease" rows="3" placeholder="Enter disease of animal"></textarea>-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group shadow-textarea ">-->
+                                <!--<label for="prescription">Shadow and placeholder</label>-->
+                                <!--<textarea class="form-control z-depth-1" ng-model="ancheta.prescription" id="prescription" rows="3" placeholder="Enter prescription of animal"></textarea>-->
+                            <!--</div>-->
+
+
+                            <!--<div id="update">-->
+                                <!--<button ng-click="yesUpdate()" class="btn btn-warning">Add</button>-->
+                            <!--</div>-->
+                        <!--</form>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; Modal footer &ndash;&gt;-->
+                    <!--<div class="modal-footer">-->
+
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-12">
+            <h1 class="text-center">
+                MongoChat
+                <!--<button id="clear" class="btn btn-danger">Clear</button>-->
+            </h1>
+            <div id="status"></div>
+            <div id="chat">
+                <input type="text" id="username" class="form-control" placeholder="Enter name...">
+                <br>
+                <div class="card">
+                    <div id="messages" class="card-block">
+
+                    </div>
+                </div>
+                <br>
+                <textarea id="textarea" class="form-control" placeholder="Enter message..."></textarea>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+
+
+
+
+
+<!--<div class="jumbotron text-center" ng-controller = "OneExpertController">-->
+
+    <!--<button class="btn btn-success" style="margin-left: 700px" ng-click = "logOut()">log Out</button>-->
+    <!--<div  class="container">-->
+        <!--<h1>{{'Dear doctor you have ' + our_pacients.length + ' clinic ancheta of pets'}}</h1>-->
+        <!--<div class="row bg-secondary mt-2 text-light"   ng-repeat="(index, pacient) in our_pacients">-->
+            <!--<div class="col-sm-6">-->
+                <!--<p>{{index+1}}</p>-->
+                <!--<p><span>Name: </span>{{pacient.firstname}}</p>-->
+
+            <!--</div>-->
+            <!--<div class="col-sm-6">-->
+                <!--<button type="button" ng-click="delete(pacient._id,index)" class="btn btn-primary btn ml-3 mr-3">Delete ancheta</button></br></br>-->
+                <!--&lt;!&ndash; Button to Open the Modal &ndash;&gt;-->
+                <!--<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ng-click="update(pacient._id)">-->
+                    <!--Update ancheta-->
+                <!--</button>-->
+                <!--<p><span>Received vaccine: </span>{{pacient.anketa[0].vaccine_name}}</p>-->
+                <!--<p><span>Date of received vaccine: </span>{{pacient.anketa[0].vaccine_date}}</p>-->
+                <!--<p><span>DName of second vaccine: </span>{{pacient.anketa[0].second_vaccine_name}}</p>-->
+                <!--<p><span>Date of second vaccine: </span>{{pacient.second_vaccine_date}}</p>-->
+                <!--<p><span>Animal disease: </span>{{pacient.disease}}</p>-->
+                <!--<p><span>Prescription of disease: </span>{{pacient.prescription}}</p>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; The Modal &ndash;&gt;-->
+        <!--<div class="modal fade" id="myModal">-->
+            <!--<div class="modal-dialog">-->
+                <!--<div class="modal-content">-->
+
+                    <!--&lt;!&ndash; Modal Header &ndash;&gt;-->
+                    <!--<div class="modal-header">-->
+                        <!--<h4 class="modal-title">Modal Heading</h4>-->
+                        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                    <!--</div>-->
+
+                    <!--&lt;!&ndash; Modal body &ndash;&gt;-->
+                    <!--&lt;!&ndash; Modal body &ndash;&gt;-->
+                    <!--<div class="modal-body">-->
+                        <!--<form name="myForm" enctype="multipart/form-data">-->
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="vaccine_name">Received vaccine: </label>-->
+                                <!--<input ng-model="animal.vaccine_name" type="text" class="form-control" id="vaccine_name" placeholder="Enter name of vaccine" name="vaccine_name">-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="vaccine_date">Date of received vaccine: </label>-->
+                                <!--<input ng-model="animal.vaccine_date" type="date" class="form-control" id="vaccine_date" placeholder="Enter date of vaccine " name="vaccine_date">-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="second_vaccine_name">Name of second vaccine: </label>-->
+                                <!--<input ng-model="animal.second_vaccine_name" type="text" class="form-control" id="second_vaccine_name" placeholder="Enter date of second vaccine " name="second_vaccine_name">-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group">-->
+                                <!--<label for="second_vaccine_date">Date of second vaccine: </label>-->
+                                <!--<input ng-model="animal.second_vaccine_date" type="date" class="form-control" id="second_vaccine_date" placeholder="Enter date of second vaccine" name="second_vaccine_date">-->
+                            <!--</div>-->
+
+                            <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="disease">Disease of animal: </label>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<input ng-model="animal.disease" type="text" class="form-control" id="disease" placeholder="Enter disease of animal" name="disease">&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                            <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="prescription">Prescription of disease: </label>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<input ng-model="animal.prescription" type="text" class="form-control" id="prescription" placeholder="Enter prescription of animal" name="prescription">&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                            <!--<div class="form-group shadow-textarea ">-->
+                                <!--<label for="disease">Disease of animal:</label>-->
+                                <!--<textarea class="form-control z-depth-1" ng-model="animal.disease" id="disease" rows="3" placeholder="Enter disease of animal"></textarea>-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group shadow-textarea ">-->
+                                <!--<label for="prescription">Shadow and placeholder</label>-->
+                                <!--<textarea class="form-control z-depth-1" ng-model="animal.prescription" id="prescription" rows="3" placeholder="Enter prescription of animal"></textarea>-->
+                            <!--</div>-->
+
+
+                            <!--<div id="update">-->
+                                <!--<button ng-click="yesUpdate()" class="btn btn-warning">Update</button>-->
+                            <!--</div>-->
+                        <!--</form>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; Modal footer &ndash;&gt;-->
+
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <!--<div class = "col-md-2 bg-primary">-->
+        <!--<header>-->
+            <!--&lt;!&ndash;<div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<h5> <i class="fa fa-user-md"style="font-size:20px ;margin-right: 10px"></i><a style="color:white" href="#!/expert">CreateExpert</a></h5>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--<div>-->
+                <!--<h5> <i class="fa fa-user-md"style="font-size:20px ;margin-right: 10px"></i><a style="color:white" href="#!/expertList">ExpertList</a></h5>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<h5> <i class="fa fa-user-md"style="font-size:20px ;margin-right: 10px"></i><a style="color:white" href="#!/updateExpert">UpdateExpert</a></h5>-->
+            <!--</div>-->
+
+            <!--<div>-->
+                <!--<h5><i class="glyphicon glyphicon-user"style="font-size:20px ;margin-right: 10px"></i><a style="color:white" href="#!/patientAdd">PatientForm</a></h5>-->
+            <!--</div>-->
+        <!--</header>-->
+    <!--</div>-->
+    <!--<h5>{{oneExpert.name}}</h5>-->
+    <!--<h5>{{oneExpert.lastname}}</h5>-->
+    <!--<h5>{{oneExpert.phone}}</h5>-->
+    <!--<h5>{{oneExpert.username}}</h5>-->
+    <!--<img src="./imagess/{{oneExpert.image}}" style="width: 80px;height: 80px">-->
+
+    <!--<div  class="col-md-12">-->
+        <!--<form>-->
+            <!--<div  class="col-md-6">-->
+                <!--<div class="form-group">-->
+                    <!--<label for="firstname">Firstname:</label>-->
+                    <!--<input type="text" class="form-control" id="firstname" placeholder="Enter patient name" ng-model="PatientData.firstname">-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="lastname">Lastname:</label>-->
+                    <!--<input type="text" class="form-control" id="lastname" placeholder="Enter patient lastname" ng-model="PatientData.lastname">-->
+                <!--</div>-->
+                <!--<div class="form-group ml-3 mr-3">-->
+                    <!--<label for="sel1">Expert</label>-->
+                    <!--<select class="form-control"  ng-model="PatientData.expert" id="sel1"  name="sellist1"  ng-options="x.name for x in obj">-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div  class="col-md-6">-->
+                <!--<div class="form-group">-->
+                    <!--<label for="mail">Email:</label>-->
+                    <!--<input type="email" class="form-control" id="mail" placeholder="Enter email" ng-model = "PatientData.email">-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="pswd">Password:</label>-->
+                    <!--<input type="password" class="form-control" id="pswd" placeholder="Enter password" ng-model = "PatientData.pswd">-->
+                <!--</div>-->
+                <!--<input type="file"  id="file1" class="form-control input-lg text-center">-->
+
+                <!--&lt;!&ndash; createToDo() WILL CREATE NEW TODOS &ndash;&gt;-->
+                <!--<button type="button" class="btn btn-primary btn-lg" ng-click="patientAdd()">PatientAdd</button>-->
+                <!--<button type="submit"  class="btn mt-1 btn-primary btn-lg" ng-click="updatePatientAdd()">UpdatePatient</button>-->
+
+            <!--</div>-->
+        <!--</form>-->
+    <!--</div>-->
+
+    <!--<table class="table table-striped table-bordered">-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--&lt;!&ndash; <th>id</th> &ndash;&gt;-->
+            <!--<th>firstname</th>-->
+            <!--<th>Lastame</th>-->
+            <!--<th>expert</th>-->
+            <!--<th>email</th>-->
+            <!--<th>Password</th>-->
+            <!--<th>Image</th>-->
+            <!--<th>Update</th>-->
+            <!--<th>Delete</th>-->
+            <!--<th>Anketa</th>-->
+
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr ng-repeat="patientAdd in patientAdds">-->
+            <!--&lt;!&ndash;<td> <a href="/api/experts/{{ expert._id }}">{{ expert.name }}</a> </td>&ndash;&gt;-->
+            <!--&lt;!&ndash;<td> <a href=" #!/singlePatientAdd?{{ patientAdd._id }}">{{ patientAdd.firstname }}</a> </td>&ndash;&gt;-->
+            <!--<td><a ng-href="#!singlePatient/?{{patientAdd._id}}">{{ patientAdd.firstname }}</a></td>-->
+            <!--<td> {{ patientAdd.lastname }}</td>-->
+            <!--<td> {{ patientAdd.expert }}</td>-->
+            <!--<td> {{ patientAdd.email }}</td>-->
+            <!--<td> {{ patientAdd.pswd }}</td>-->
+            <!--<td><img src="./image/{{ patientAdd.image}}" style="width: 80px;height: 80px"></td>-->
+            <!--<td><button  ng-click="editePatientAdd(patientAdd._id)">Edite</button></td>-->
+            <!--<td><button  ng-click="deletePatientAdd(patientAdd._id)">Delete</button></td>-->
+            <!--<td><a href="#!patientAnketa/?{{patientAdd._id}}">Anketa</a></td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+<!--</div>-->

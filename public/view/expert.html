@@ -1,0 +1,157 @@
+<section class="col-md-12  text-center" ng-controller = "ExpertController">
+    <div class="col-md-12 mt-4">
+        <div class="row">
+            <div class="col-md-2" style="height: 55%; background-color: #00bfff">
+                <img id="img_menu" src="images/doctor-dog.jpg" style="width: 200px;height: 300px">
+                <div class="menu">
+                    <h3 class="mt-3 ml-5" >Experts</h3>
+
+                </div>
+                <div class="menu" style="margin-top: 140%; margin-left: 40%">
+                    <a class="mt-1" href="#!/">Home</a>
+                </div>
+            </div>
+            <div id="centreForm" class="col-md-10 text-center">
+                <div class="col-md-12 d-flex" style="background-color: #00bfff">
+                    <div class="col-md-2 d-flex">
+                        <img src="http://southamptonhospitalschool.co.uk/wp-content/uploads/2018/03/Hospital-Icon.png" alt="" style="height: 100px; width: auto">
+                        <h3 class="mt-3 ml-4" >Experts</h3>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-5">
+                        <a class="ml-2 text-white" href="">Dashboard</a>
+                        <a class="ml-2 text-white" href="">Chat</a>
+                        <a class="ml-2 text-white" href="">Form</a>
+                        <a class="ml-2 text-white" href="">Calendar</a>
+                    </div>
+                </div>
+                <h1 class="mt-3">Experts</h1>
+                <div class="col-md-12 col-md-offset-2 text-center">
+                    <div class="col-md-12 errors mt-5 mb-5" ng-show="fullInnput">
+                        <i class="fa fa-info-circle icon" ></i>
+                        <span class="ml-3" ng-style="myError" style="color: red">{{experts.message}}</span>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label>Username</label>
+                                <input type="text" class="form-control input-md text-center" placeholder="example@gmail.com" ng-model="check.email">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label>Password</label>
+                                <input type="text" class="form-control input-md text-center" placeholder="Enter password of centre" ng-model="check.password">
+                            </div>
+                            <a  style="margin-left: 300px" href="#!ForgotPassword/?">Forgot password?</a>
+
+                            <div class="form-group col-md-4">
+                                <label>Log In</label>
+                                <!--<button type="button" class="btn btn-success btn-md mt-1 ml-1" ng-click="checkCenters()"></button>-->
+                                <a id="a" href="" ng-click="checkExperts()" class="btn btn-md mt-1 ml-1"  style="background-color: #00bfff; color: white;">Log In</a>
+                            </div>
+                        </div>
+                    </form>
+
+                    <h4>Registration</h4>
+                    <!-- FORM TO CREATE Centre -->
+                    <div id="expert-form" class="jumbotron text-center">
+                        <div class="col-sm-12 col-md-offset-2 text-center">
+
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>First Name</label>
+                                        <!-- BIND THIS VALUE TO centre IN ANGULAR -->
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your firstname" ng-model="expert.firstname">
+                                        <span class="err" style="color:red">{{errors.firstnameErr}}</span>
+                                    </div>
+
+
+
+                                    <div class="form-group col-md-6">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter address of centre" ng-model="expert.address">
+                                        <span class="err" style="color:red">{{errors.addressErr}}</span>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>Last name</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your lastname" ng-model="expert.lastname">
+                                        <span class="err" style="color:red">{{errors.lastnameErr}}</span>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label>Cell</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your cell" ng-model="expert.cell">
+                                        <span class="err" style="color:red">  {{errors.cellErr}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>Username</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="example@gmail.com" ng-model="expert.username">
+                                        <span class="err" style="color:red">{{errors.emailErr}}</span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Profession</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your profession" ng-model="expert.profession">
+                                        <span class="err" style="color:red">  {{errors.professionErr}}</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="form-group col-md-6">
+                                        <label>Password</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your password" ng-model="expert.password">
+                                        <span class="err" style="color:red">{{errors.passwordErr}}</span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Centre</label>
+
+                                        <select style="width: 100%; height: 52px" ng-model="expert.centre" ng-options="user._id as user.centreName for user in centres"></select>
+                                        <span class="err" style="color:red">{{errors.centreErr}}</span>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+
+                                    <div class="form-group col-md-6">
+                                        <label>Work place</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your password" ng-model="expert.workPlace">
+                                        <span class="err" style="color:red"> {{errors.workPlaceErr}}</span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Work's phone</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your centre" ng-model="expert.phone">
+                                        <span class="err" style="color:red"> {{errors.phoneErr}}</span>
+                                    </div>
+
+                                </div>
+
+
+                                <label>Picture</label>
+                                <div class="form-group">
+                                    <input type="file"  id="centreImage" class="form-control input-md text-center" name="file_upload">
+                                </div>
+
+                                <!-- createToDo() WILL CREATE NEW CENTRES -->
+                                <button type="button" class="btn btn-md mt-1 "  ng-click="addCenters()" style="background-color: #00bfff">Send</button>
+                                <!--<button type="submit"  class="btn  btn-md mt-1" ng-click="updateExpert()" style="background-color: #00bfff">Update</button>-->
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

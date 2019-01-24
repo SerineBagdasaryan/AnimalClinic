@@ -1,0 +1,97 @@
+<section class="col-md-12  text-center" ng-controller = "ProfileExpertController">
+
+    <button class="btn btn-success" ng-click = "logOut()" style="margin-left: 900px">Log Out</button>
+    <div class="col-md-12 jumbotron" >
+        <div class="row">
+            <div class="col-md-2" style="height: 70%">
+                <img id="img_menu" src="images/doctor-dog.jpg" style="width:150px;height:300px">
+                <div class="menu">
+                    <h3 class="mt-3 ml-5" >Expert</h3>
+                    <a class="mt-3" href="#!/">Home</a>
+                    <a class="mt-3" href="#!/dashboard">Chart</a>
+                    <a class="mt-3" href="#!/expert">Form</a>
+                    <a class="mt-3" href="#!/calendar">Calendar</a>
+                    <a class="mt-3" href="#!/patientAdd">PatientAdd</a>
+                    <a  class="mt-3" ng-href="#!/singleCenter?{{d._id}}"><p>Your center</a>
+
+
+                </div>
+            </div>
+            <div class="col-md-5 d-flex">
+                <div class="mt-3 ml-5">
+                    <img id="changeImg" src="images/experts/{{profile.image}}" style="width:200px;height:200px;border-radius:10px;border:3px;margin-right: 700px">
+                </div>
+                <div class="form-group">
+                    <input type="file" style="width: 125px; margin-top: 20px; margin-left: 84px; display: none;"  id="image" class="form-control input-md text-center" name="file">
+                </div>
+
+                <button class="btn btn-success btn-md mt-4" style="margin-left: 25%;" ng-click="changeImg()">Change image</button>
+            </div>
+
+            <div class="col-md-5">
+                Your patients {{z}} %
+                <h1>{{profile.firstname}}</h1>
+                <p>{{profile.lastname}}</p>
+                <p>{{profile.phone}}</p>
+                <p>{{profile.address}}</p>
+                <p>{{profile.username}}</p>
+                <a href="#!/updateExpert/?{{expert._id}}" role="button">Edit</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" ng-repeat="patient in patients" style="margin-top: 100px">
+                <img src="./images/patients/{{patient.image}}" style="width:200px;height:150px;border-radius:10px;border:3px">
+                <h2>Your patients</h2>
+                <a ng-href="#!singlePatient/?{{patient._id}}">{{patient.fullname}}</a>
+                <a  style="color:blue;" ng-href="#!/updatePatient/?{{patient._id}}">Edit</a>
+                <a href="" ng-click="deletePatient(patient._id)">Delete</a>
+                <a  style="color:blue;" ng-href="#!/anketa/?{{patient._id}}">Create Anceta</a>
+                <a href="" ng-click="anketaPatient(patient._id)">Show anketa</a>
+                <p>{{patient.phone}}</p>
+                <p>{{patient.username}}</p>
+            </div>
+            <div class="col-md-6">
+                <h6>{{anketa[0].vaccine_name}}</h6>
+                <h6>{{anketa[0].vaccine_name}}</h6>
+                <h6>{{anketa[0]. vaccine_date}}</h6>
+                <h6>{{anketa[0].second_vaccine_name}}</h6>
+                <h6>{{anketa[0].second_vaccine_date}}</h6>
+                <h6>{{anketa[0].disease}}</h6>
+                <h6>{{anketa[0].prescription}}</h6>
+                <a ng-show="hide" style="color:blue;" ng-href="#!/updateanketa/?{{anketa[0]._id}}">Edit</a>
+                <a ng-show="show" href="" ng-click="delete(anketa[0]._id)">Delete</a>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-12">
+            <h1 class="text-center">
+                MongoChat
+                <!--<button id="clear" class="btn btn-danger">Clear</button>-->
+            </h1>
+            <div id="status"></div>
+            <div id="chat">
+                <input type="text" id="username" ng-value="usernamed" class="form-control" placeholder="Enter name...">
+                <br>
+                <div class="card">
+                    <div id="messages" class="card-block">
+
+                    </div>
+                </div>
+                <br>
+                <textarea  ng-keydown="send()" id="textarea" class="form-control" placeholder="Enter message..."></textarea>
+                <!--<button >send</button>-->
+            </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+

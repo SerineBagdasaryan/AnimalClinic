@@ -1,0 +1,151 @@
+<section class="col-md-12  text-center" ng-controller = "PatientController">
+    <div class="col-md-12 mt-4">
+        <div class="row">
+            <div class="col-md-2" style="height: 55%; background-color: #00bfff">
+                <img id="img_menu" src="images/doctor-dog.jpg">
+                <div class="menu">
+                    <h3 class="mt-3 ml-5" >Patients</h3>
+
+                </div>
+                <div class="menu" style="margin-top: 140%; margin-left: 40%">
+                    <a class="mt-1" href="#!/">Home</a>
+                </div>
+            </div>
+            <div id="centreForm" class="col-md-10 text-center">
+                <div class="col-md-12 d-flex" style="background-color: #00bfff">
+                    <div class="col-md-2 d-flex">
+                        <img src="http://southamptonhospitalschool.co.uk/wp-content/uploads/2018/03/Hospital-Icon.png" alt="" style="height: 100px; width: auto">
+                        <h3 class="mt-3 ml-4" >Patients</h3>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-5">
+                        <a class="ml-2 text-white" href="">Dashboard</a>
+                        <a class="ml-2 text-white" href="">Chat</a>
+                        <a class="ml-2 text-white" href="">Form</a>
+                        <a class="ml-2 text-white" href="">Calendar</a>
+                    </div>
+                </div>
+                <h1 class="mt-3">Patients</h1>
+                <div class="col-md-12 col-md-offset-2 text-center">
+                    <div class="col-md-12 errors mt-5 mb-5" ng-show="myErrors">
+                        <i class="fa fa-info-circle icon" ></i>
+                        <span class="ml-3" ng-style="myError" style="color: red">{{checkData.message}}</span>
+                    </div>
+                    <!--<form>-->
+                    <!--<div class="row">-->
+                    <!--<div class="form-group col-md-4">-->
+                    <!--<label>Username</label>-->
+                    <!--<input type="text" class="form-control input-md text-center" placeholder="example@gmail.com" ng-model="check.email">-->
+                    <!--</div>-->
+
+                    <!--<div class="form-group col-md-4">-->
+                    <!--<label>Password</label>-->
+                    <!--<input type="text" class="form-control input-md text-center" placeholder="Enter password of centre" ng-model="check.password">-->
+                    <!--</div>-->
+
+                    <!--<div class="form-group col-md-4">-->
+                    <!--<label>Log In</label>-->
+                    <!--&lt;!&ndash;<button type="button" class="btn btn-success btn-md mt-1 ml-1" ng-click="checkCenters()"></button>&ndash;&gt;-->
+                    <!--<a id="a" href="" ng-click="checkPatient()" class="btn btn-md mt-1 ml-1"  style="background-color: #00bfff; color: white;">Log In</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</form>-->
+
+                    <!--ng-href="#!/centre/?{{checkData.href}}"-->
+
+
+                    <!-- createToDo() WILL CREATE NEW CENTRES -->
+                    <h4>Registration</h4>
+                    <!-- FORM TO CREATE Centre -->
+                    <div id="patient-form" class="jumbotron text-center">
+                        <div class="col-sm-12 col-md-offset-2 text-center">
+
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>Fullname</label>
+                                        <!-- BIND THIS VALUE TO centre IN ANGULAR -->
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your fullname" ng-model="patient.fullname">
+                                    </div>
+
+
+
+                                    <div class="form-group col-md-6">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter address" ng-model="patient.address">
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>Phone</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your phone" ng-model="patient.phone">
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label>Username</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="example@gmail.com" ng-model="patient.username">
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="form-group col-md-6">
+                                        <label>Animals</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="animals" ng-model="patient.animals">
+                                    </div>
+
+                                    <!--<div class="form-group col-md-6">-->
+                                    <!--<label>Count</label>-->
+                                    <!--<input type="text" class="form-control input-lg text-center" placeholder="Enter count" ng-model="patient.count">-->
+                                    <!--</div>-->
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="form-group col-md-6">
+                                        <label>Password</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your password" ng-model="patient.password">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Expert</label>
+                                        <select style="width: 100%; height: 52px" ng-model="patient.expert" ng-options="user._id as user.firstname + ' ' + user.lastname for user in experts"></select>
+
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+
+                                    <label>Picture</label>
+                                    <div class="form-group">
+                                        <input type="file"  id="patientImage" class="form-control input-md text-center" name="file_upload">
+                                    </div>
+
+                                </div>
+                                <!-- createToDo() WILL CREATE NEW CENTRES -->
+                                <button type="button" class="btn btn-md mt-1 "  ng-click="addPatient()" style="background-color: #00bfff">Send</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+

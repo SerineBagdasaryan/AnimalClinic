@@ -1,0 +1,127 @@
+body {
+    overflow-x: hidden;
+}
+.box {
+    margin-top: 25px;
+    padding-bottom: 35px;
+    margin-bottom: 10px;
+    border-bottom: 2px dashed gainsboro;
+}
+#header_first_child {
+    background-color: #B577EA;
+}
+#header_second_child {
+    background-color: #D8ABEA;
+}
+#href {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+#href1 {
+    width: 650px;
+    height: 650px;
+    border-radius: 15px;
+}
+.middle {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.small {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00bfff;
+    border-radius: 15px;
+}
+.small a {
+    color: white;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -5px;
+    position: absolute;
+    z-index: 2;
+
+}
+#img_menu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.date {
+    margin-left: -15px;
+}
+
+.errors {
+    height: 60px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    border-left: 5px solid gray;
+}
+.icon {
+    font-size:24px;
+    color: gray;
+    margin-left: 1.5%;
+}
+a {
+    color: #00bfff;
+}
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+#every {
+    position: absolute;
+    z-index: 2;
+    margin-top: 30%;
+    margin-left: 25%;
+}
+
+
+/**
+calendar
+ */
+
+.note {
+    color: rgba(128, 128, 128, 0.75);
+    float: right;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.long-title h3 {
+    font-family: 'Segoe UI Light', 'Helvetica Neue Light', 'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana;
+    font-weight: 200;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/*#messages{height:300px;}*/
+
+
+
+/**{ margin: 0; padding: 0; box-sizing: border-box; }*/
+/*body { font: 13px Helvetica, Arial; }*/
+/*form { background: #000; padding: 3px; bottom: 0; width: 100%; }*/
+/*form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }*/
+/*form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }*/
+/*#messages { list-style-type: none; margin: 0; padding: 0; }*/
+/*#messages li { padding: 5px 10px; }*/
+/*#messages li:nth-child(odd) { background: #eee; }*/
+/*#messages { margin-bottom: 40px }*/

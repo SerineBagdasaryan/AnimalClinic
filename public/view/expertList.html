@@ -1,0 +1,23 @@
+<div class="container-fluid" style='background-color:#ffffff' margin-left="70px"  ng-controller="CenterListController">
+    <div class="row">
+        <div class="col-md-5 ml-5" ng-repeat="x in experts">
+            <div class="row">
+                <div class="col-sm-10" >
+                    <div class="col-sm-12">
+                        <img src="./images/experts/{{x.image}}" style="width:300px;height:200px;border-radius:10px;border:3px">
+                    </div>
+                    <div class="col-sm-6"></div>
+                    <p>
+                        <a ng-href="#!singleExpert/?{{x._id}}">{{x.firstname}}</a>
+                    {{x.lastname}}
+                    {{x.address}}
+                    {{x.phone}}
+                    {{x.username}}
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

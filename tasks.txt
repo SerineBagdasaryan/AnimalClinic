@@ -1,0 +1,42 @@
+Registration forms
+
+1 Registration for patients (for pets account)
+  . Pets type (dog, cat ... )sekect box
+  . birthday datapicker
+  . name, picture, owner name, email, phone, address
+  - password
+
+
+2 Registration for centers
+  . clinical name etc 
+  . birthday datapicker
+  . name, picture, owner name, email, phone, address
+  - password
+
+
+
+centers,
+
+menue
+
+1 experts (list, crud )
+2 patients (add, edit...)
+3 care plan for each patients
+calendar
+
+
+experts
+
+menue
+
+
+1 patients (add, edit...)
+2 care plan for each patients
+3 calendar
+
+
+patients 
+1 experts 
+2 kids 
+3 careplan for each kids
+calendar
