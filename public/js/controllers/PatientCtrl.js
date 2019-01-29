@@ -1,5 +1,7 @@
 app.controller('PatientController', function ($scope, $http, $location, $log, $window, $rootScope) {
-
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
     $http.get('/find_experts')
         .then(function (result) {
             $scope.experts = result.data;

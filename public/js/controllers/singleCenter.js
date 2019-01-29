@@ -6,7 +6,7 @@ console.log(id);
 $http.get('/centres/'+id)
     .then(function (res) {
         $scope.singleCenter=res.data;
-        console.log('hy', $scope.singleCenter);
+        console.log('hy', $scope.singleCenter.image);
 
     })
     .catch(function (res) {

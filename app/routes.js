@@ -349,19 +349,22 @@ module.exports = function(app) {
         var regphone=/^[0-9]*$/;
         var errorObj = {};
         success = true;
-        if(req.body.fullname==undefined){
+        if(req.body.petsName==undefined){
             errorObj.fullnameErr="Please enter your fullname"
             success = false;
         }
-        // else {
-        //     if (!req.body.fullname.obj(regname)) {
-        //         errorObj.fullnameErr = 'Write only leters';
-        //         success = false;
-        //     }
-        // }
+        if(req.body.ownername==undefined){
+            errorObj.ownernameErr="Please enter ownername"
+            success = false;
+        }
+        if(req.body.birthday==undefined){
+            errorObj.birthdayErr="Please enter your pet birthday"
+            success = false;
+        }
+
 
         if(req.body.animals==undefined){
-            errorObj.animalsErr="Please enter your animals"
+            errorObj.animalsErr="Please enter your pet type"
             success = false;
         }
         // else {
@@ -418,8 +421,8 @@ module.exports = function(app) {
         //
         //     errors.imageError = "Image is empty";
         //     success = false;
-        // }
-        // if(req.body.file==undefined){
+        // }req.files
+        // if(req.body.files==undefined){
         //     errorObj.originalnameErr="Please choose image"
         //     success = false;
         // }
@@ -436,7 +439,9 @@ module.exports = function(app) {
                     fs.rename(file.path, 'public/images/patients/' + file.originalname, function (err) {
                         if (err) throw err;
                         var patient = new Patient({
-                            fullname: req.body.fullname,
+                            petsName: req.body.petsName,
+                            ownername: req.body.ownername,
+                            birthday: req.body.birthday,
                             phone: req.body.phone,
                             username: req.body.username,
                             expert: req.body.expert,
@@ -633,8 +638,6 @@ module.exports = function(app) {
 
                 });
             });
-        } else {
-            console.log("Please enter only image");
         }
 
 
@@ -659,7 +662,7 @@ module.exports = function(app) {
                         expert.lastname=req.body.lastname;
                         expert.username=req.body.username;
                         expert.password=req.body.password;
-                        expert.workPlace=req.body.workPlace;
+                        // expert.workPlace=req.body.workPlace;
                         expert.phone=req.body.phone;
                         expert.profession=req.body.profession;
                         expert.cell=req.body.cell;
@@ -680,10 +683,7 @@ module.exports = function(app) {
 
                 });
             });
-        } else {
-            console.log("Please enter only image");
         }
-
 
     });
 
@@ -701,17 +701,19 @@ module.exports = function(app) {
                 var filename = (new Date).valueOf() + "_" + file.originalname
                 fs.rename(file.path, 'public/images/patients/' + file.originalname, function (err) {
                     if (err) console.log("image_error");
-                    Patient.findOne({_id: req.body.id}, function (err, expert) {
+                    Patient.findOne({_id: req.body.id}, function (err, patient) {
                         if (err) console.log("Error");
-                        expert.fullname =req.body.fullname ;
-                        expert.phone =req.body.phone ;
-                        expert.animals =req.body.animals ;
-                        expert.expert =req.body.expert;
-                        expert.username =req.body.username ;
-                        expert.password =req.body.password;
-                        expert.address =req.body.address;
-                        expert.image = file.originalname;
-                        expert.save(function (err, result) {
+                        patient.petsName =req.body.petsName ;
+                        patient.ownername =req.body.ownername ;
+                        patient.birthday =req.body.birthday ;
+                        patient.phone =req.body.phone ;
+                        patient.animals =req.body.animals ;
+                        patient.expert =req.body.expert;
+                        patient.username =req.body.username ;
+                        patient.password =req.body.password;
+                        patient.address =req.body.address;
+                        patient.image = file.originalname;
+                        patient.save(function (err, result) {
                             if (err)
 
                                 res.send(err);
@@ -734,6 +736,8 @@ module.exports = function(app) {
 
     app.post('/patientsAnketa/', function (req, res) {
         console.log('patientsAnket', req.body.id);
+        var email;
+       var id=req.body.id;
         Anceta.create({
             vaccine_name: req.body.scopp.vaccine_name,
             vaccine_date: req.body.scopp.vaccine_date,
@@ -745,14 +749,52 @@ module.exports = function(app) {
         }, function (err, patient) {
             if (err)
                 res.send(err);
-            res.json(patient);
-            // get and return all the patients after you create another
-            // Anceta.find(function (err, patients) {
-            //     if (err)
-            //         res.send(err)
-            //     res.json(patients);
-            // });
+            console.log(patient);
+            // res.json(patient);
         });
+        Patient.findOne({_id:id}, function (err, patients) {
+            if (err)
+                res.send(err);
+
+            console.log(patients.username,"username");
+            email=patients.username;
+
+            // res.send(patients);
+
+
+
+        var nodemailer = require('nodemailer');
+
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'fornodejstest@gmail.com',
+                pass: 'ooo111'
+            }
+        });
+
+        const mailOptions = {
+
+            to:email, // list of receivers
+            subject: 'Anceta', // Subject line
+            html: '<p> Dear ' + req.body.scopp.vaccine_name + " " + req.body.scopp.vaccine_date + '</p>'// plain text body
+        };
+
+        transporter.sendMail(mailOptions, function (err, info) {
+            if(err)  {
+                // console.log(err)
+            }
+            else {
+                // console.log(info);
+            }
+
+        });
+
+        var resultat ={resultat :"Patient Anceta send to email"};
+        res.send(resultat);
+        });
+
+
     });
 
 
@@ -1090,10 +1132,6 @@ module.exports = function(app) {
             errorObj.phoneErr="Please enter your phone"
             success = false;
         }
-    if(req.body.workPlace==undefined){
-            errorObj.workPlaceErr="Please enter your workPlace"
-            success = false;
-        }
         if(req.body.profession==undefined){
             errorObj.professionErr="Please enter your profession"
             success = false;
@@ -1117,7 +1155,6 @@ module.exports = function(app) {
                         lastname:req.body.lastname,
                         username:req.body.username,
                         password:req.body.password,
-                        workPlace:req.body.workPlace,
                         phone:req.body.phone,
                         profession:req.body.profession,
                         cell:req.body.cell,
@@ -1177,7 +1214,6 @@ module.exports = function(app) {
                 password: req.body.password,
                 phone: req.body.phone,
                 profession: req.body.profession,
-                workPlace: req.body.workPlace,
                 workPhone: req.body.workPhone,
                 filename: req.body.filename
             }, function (err, expert) {

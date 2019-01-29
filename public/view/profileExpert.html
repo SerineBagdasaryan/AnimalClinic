@@ -42,13 +42,14 @@
         <div class="row">
             <div class="col-md-6" ng-repeat="patient in patients" style="margin-top: 100px">
                 <img src="./images/patients/{{patient.image}}" style="width:200px;height:150px;border-radius:10px;border:3px">
+
                 <h2>Your patients</h2>
-                <a ng-href="#!singlePatient/?{{patient._id}}">{{patient.fullname}}</a>
+                <a ng-href="#!singlePatient/?{{patient._id}}">{{patient.petsName}}</a>
                 <a  style="color:blue;" ng-href="#!/updatePatient/?{{patient._id}}">Edit</a>
                 <a href="" ng-click="deletePatient(patient._id)">Delete</a>
                 <a  style="color:blue;" ng-href="#!/anketa/?{{patient._id}}">Create Anceta</a>
                 <a href="" ng-click="anketaPatient(patient._id)">Show anketa</a>
-                <p>{{patient.phone}}</p>
+                <p>{{patient.animals}}</p>
                 <p>{{patient.username}}</p>
             </div>
             <div class="col-md-6">

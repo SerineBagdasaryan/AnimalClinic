@@ -17,7 +17,7 @@ console.log(page,"gt")
 
                 console.log( $scope.object.image,"bpoooo");
 
-        })
+
 $scope.updateCenters=function () {
     var formData;
     formData = new FormData;
@@ -42,5 +42,6 @@ $scope.updateCenters=function () {
 
 
 }
+        })
 
 });

@@ -64,23 +64,36 @@
                                     <div class="form-group col-md-6">
 
                                         <!--. name animall-->
-                                        <label>name animall</label>
-                                        <!-- BIND THIS VALUE TO centre IN ANGULAR -->
-                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your fullname" ng-model="patient.fullname">
+                                        <label>Pet Name</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your Pet Name" ng-model="patient.petsName">
                                         <span class="err" style="color: red">{{errors.fullnameErr}}</span>
                                     </div>
-
-                                    <!--birthday datapicker-->
-                                    <!--owner name,-->
                                     <div class="form-group col-md-6">
-                                        <label>Address</label>
-                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter address" ng-model="patient.address">
-                                        <span class="err" style="color: red">{{errors.addressErr}}</span>
+                                        <label>Pet type</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Pet type" ng-model="patient.animals">
+                                        <span class="err" style="color: red">{{errors.animalsErr}}</span>
                                     </div>
+
 
 
                                 </div>
 
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label> Pet Birthday</label>
+                                        <input type="date"  id="datepicker" class="form-control input-lg text-center" placeholder="Enter pet birthday" ng-model="patient.birthday">
+                                        <span class="err" style="color: red">{{errors.birthdayErr}}</span>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label>Owner Name</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter owner name" ng-model="patient.ownername">
+                                        <span class="err" style="color: red">{{errors.ownernameErr}}</span>
+                                    </div>
+
+
+                                </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label>Phone</label>
@@ -97,26 +110,16 @@
 
                                 </div>
 
-                                <!--. Pets type (dog, cat ... )select box-->
+
 
                                 <div class="row">
 
                                     <div class="form-group col-md-6">
-                                        <label>Animals</label>
-                                        <input type="text" class="form-control input-lg text-center" placeholder="animals" ng-model="patient.animals">
-                                        <span class="err" style="color: red">{{errors.animalsErr}}</span>
+                                        <label>Address</label>
+                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter address" ng-model="patient.address">
+                                        <span class="err" style="color: red">{{errors.addressErr}}</span>
                                     </div>
-                                    <!--<div class="form-group col-md-6">-->
-                                    <!--<label>Animals</label>-->
-                                    <!--<select class="form-control"  ng-model="patient.animals"   ng-options="x.type for x in animalType">-->
-                                    <!--</select>-->
 
-                                    <!--</div>-->
-
-                                    <!--<div class="form-group col-md-6">-->
-                                    <!--<label>Count</label>-->
-                                    <!--<input type="text" class="form-control input-lg text-center" placeholder="Enter count" ng-model="patient.count">-->
-                                    <!--</div>-->
 
                                 </div>
 
@@ -124,7 +127,7 @@
 
                                     <div class="form-group col-md-6">
                                         <label>Password</label>
-                                        <input type="text" class="form-control input-lg text-center" placeholder="Enter Your password" ng-model="patient.password">
+                                        <input type="password" class="form-control input-lg text-center" placeholder="Enter Your password" ng-model="patient.password">
                                         <span class="err" style="color: red">{{errors.passwordErr}}</span>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -140,6 +143,7 @@
                                     <label>Picture</label>
                                     <div class="form-group">
                                         <input type="file"  id="patientImage" class="form-control input-md text-center" name="file_upload">
+                                        <span class="err" style="color: red"> {{errors.originalnameErr}}</span>
                                     </div>
 
                                 </div>

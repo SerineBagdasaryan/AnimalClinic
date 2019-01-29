@@ -21,10 +21,13 @@
                 <img src="./images/patients/{{profile.image}}" style="width:250px;height:200px;border-radius:10px;border:3px">
             </div>
             <div class="col-md-5">
-                <h1>{{profile.fullname}}</h1>
-                <p>{{profile.phone}}</p>
-                <p>{{profile.animals}}</p>
-                <p>{{profile.address}}</p>
+                <h1>PetsName:{{profile.petsName}}</h1>
+                <p>Animals:{{profile.animals}}</p>
+                <p>Birthday:{{profile.birthday}}</p>
+                <p>Ownername:{{profile.ownername}}</p>
+                <p>Phone:{{profile.phone}}</p>
+                <p>Address:{{profile.address}}</p>
+                <p>Username:{{profile.username}}</p>
                 <!--<a  ng-href="#!/singleExpert?{{d._id}}"><p>Your expert {{d.firstname}}</p></a>-->
                 <a href="" ng-click="anketaPatient(profile._id)">Show anketa</a>
                 <a href="" ng-click="deletePatient(profile._id)">Delete</a>

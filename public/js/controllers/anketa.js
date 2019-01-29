@@ -22,7 +22,6 @@ app.controller('PatientAnketaController', function ($scope,$http,$location) {
                 $scope.single_experts = res.data;
                 console.log('single',$scope.single_experts);
             })
-
     }
 });
 

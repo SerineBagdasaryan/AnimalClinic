@@ -24,16 +24,15 @@ var Schema = mongoose.Schema;
 //     }
 // });
 
-
-
 var Patient = new Schema({
-    fullname :  { type : String },
-    phone :  { type : String},
-    animals :  { type : String},
-    password :  { type : String},
-    address :  { type : String },
-    // count :  { type : Number , required : true },
-    username :  { type : String  },
+    petsName :  { type : String, required : true},
+    ownername :  { type : String, required : true},
+    birthday :  { type : Date, required : true},
+    phone :  { type : String,required : true},
+    animals :  { type : String,required : true},
+    password :  { type : String,required : true},
+    address :  { type : String,required : true },
+    username :  { type : String,required : true},
     expert : {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Expert'
