@@ -13,11 +13,16 @@ app.controller('ProfilePatientController', function ($scope, $http, $location, $
             $http.get('/api/experts/'+expertId)
                 .then(function (res){
                     $scope.d = res.data
-                    console.log( $scope.d.firstname,"y");
+                    console.log( $scope.d.centre,"y");
+                    centreId=$scope.d.centre;
+                    console.log(centreId,"ccc");
+                    $http.get('/centres/'+centreId)
+                        .then(function (res) {
+                            $scope.singleCenter=res.data;
+                            console.log('hyhyhy', $scope.singleCenter );
 
+                        })
                 })
-
-
 
                 (function(){
                     var element = function(id){
@@ -96,9 +101,7 @@ app.controller('ProfilePatientController', function ($scope, $http, $location, $
                 })();
 
         })
-        .catch(function (res) {
-            console.log(res);
-        })
+
     $scope.logOut=function () {
         $location.url('/patient');
 

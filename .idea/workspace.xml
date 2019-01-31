@@ -3,27 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="817d7feb-1b64-42ff-a970-469c7ee33fa7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/centre.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/centre.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/expert.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/expert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/patient.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/patient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/controllers/PatientCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/controllers/PatientCtrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/controllers/anketa.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/controllers/anketa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/controllers/singleCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/controllers/singleCenter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/controllers/updateCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/controllers/updateCenter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/adminCentre.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/adminCentre.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/anketa.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/anketa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/centre.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/centre.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/expert.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/expert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/patient.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/patient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/patientAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/patientAdd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/profileExpert.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/profileExpert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/controllers/profilePatient.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/controllers/profilePatient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/view/profilePatient.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/profilePatient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/singleCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/singleCenter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/singleExpert.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/singleExpert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/singlePatient.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/singlePatient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/updateExpert.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/updateExpert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/view/updatePatient.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/view/updatePatient.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -113,39 +95,40 @@
     <session id="1474995343">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="138" />
-          <entry key="js" value="174" />
+          <entry key="html" value="161" />
+          <entry key="js" value="225" />
           <entry key="txt" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="138" />
-          <entry key="JavaScript" value="174" />
+          <entry key="HTML" value="161" />
+          <entry key="JavaScript" value="225" />
           <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="25" />
-          <entry key="js" value="20" />
+          <entry key="html" value="29" />
+          <entry key="js" value="25" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="25" />
-          <entry key="JavaScript" value="20" />
+          <entry key="HTML" value="29" />
+          <entry key="JavaScript" value="25" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -156,53 +139,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
+            <state relative-caret-position="11949">
               <caret line="1151" column="9" selection-start-line="1151" selection-start-column="9" selection-end-line="1151" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/view/profileExpert.html">
+        <entry file="file://$PROJECT_DIR$/public/js/controllers/PatientCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/view/singleExpert.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/view/updateExpert.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="62" selection-start-line="62" selection-end-line="66" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/expert.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="109">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/view/expert.html">
+        <entry file="file://$PROJECT_DIR$/public/view/profilePatient.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="102" column="109" lean-forward="true" selection-start-line="102" selection-start-column="109" selection-end-line="102" selection-end-column="109" />
+            <state relative-caret-position="205">
+              <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/controllers/profilePatient.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/controllers/singleCenter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="58" selection-start-column="58" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -235,7 +209,6 @@
         <option value="$PROJECT_DIR$/public/js/controllers/singleExpert.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/singlePatient.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/updatePatient.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/js/controllers/CentreCtrl.js" />
         <option value="$PROJECT_DIR$/public/view/ForgotPasswordC.html" />
         <option value="$PROJECT_DIR$/public/view/oneExpert.html" />
@@ -246,15 +219,12 @@
         <option value="$PROJECT_DIR$/public/js/controllers/updateExpert.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/ExpertCtrl.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/oneExpertCtrl.js" />
-        <option value="$PROJECT_DIR$/public/js/controllers/profilePatient.js" />
         <option value="$PROJECT_DIR$/public/js/controllers/updateCenter.js" />
         <option value="$PROJECT_DIR$/public/view/adminCentre.html" />
         <option value="$PROJECT_DIR$/app/models/centre.js" />
-        <option value="$PROJECT_DIR$/public/js/controllers/PatientCtrl.js" />
         <option value="$PROJECT_DIR$/public/view/patientAdd.html" />
         <option value="$PROJECT_DIR$/app/models/patient.js" />
         <option value="$PROJECT_DIR$/public/view/patient.html" />
-        <option value="$PROJECT_DIR$/public/view/profilePatient.html" />
         <option value="$PROJECT_DIR$/public/view/updatePatient.html" />
         <option value="$PROJECT_DIR$/tasks.txt" />
         <option value="$PROJECT_DIR$/public/view/anketa.html" />
@@ -269,6 +239,10 @@
         <option value="$PROJECT_DIR$/app/routes.js" />
         <option value="$PROJECT_DIR$/app/models/expert.js" />
         <option value="$PROJECT_DIR$/public/view/expert.html" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/js/controllers/PatientCtrl.js" />
+        <option value="$PROJECT_DIR$/public/js/controllers/profilePatient.js" />
+        <option value="$PROJECT_DIR$/public/view/profilePatient.html" />
       </list>
     </option>
   </component>
@@ -297,10 +271,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="564" />
-    <option name="y" value="46" />
-    <option name="width" value="1193" />
-    <option name="height" value="911" />
+    <option name="x" value="418" />
+    <option name="y" value="28" />
+    <option name="width" value="821" />
+    <option name="height" value="673" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -308,6 +282,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -359,12 +334,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hospitalsControler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -406,18 +380,20 @@
       <workItem from="1548402629471" duration="4192000" />
       <workItem from="1548693949183" duration="1546000" />
       <workItem from="1548698779350" duration="537000" />
-      <workItem from="1548752248802" duration="15974000" />
+      <workItem from="1548752248802" duration="16883000" />
+      <workItem from="1548781320177" duration="608000" />
+      <workItem from="1548927456992" duration="4110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59355000" />
+    <option name="totallyTimeSpent" value="64982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17782739" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18824404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -431,7 +407,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21568628" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24836601" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -464,9 +440,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ss/server.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/ForgotPassword.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -531,13 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="112" column="52" lean-forward="true" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/updateanketa.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -579,13 +545,6 @@
     <entry file="file://$PROJECT_DIR$/public/images/experts/anahit.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/profilePatient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/updateCenter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -618,11 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
           <caret line="97" column="10" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -637,9 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="150" column="38" selection-start-line="150" selection-start-column="38" selection-end-line="150" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,13 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="20" column="35" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/PatientCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -720,27 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/view/profilePatient.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="29" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/singleCenter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/view/singleCenter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -751,13 +678,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/view/patient.html">
+    <entry file="file://$PROJECT_DIR$/public/view/expert.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="145" column="56" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="148" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1707">
+          <caret line="102" column="109" selection-start-line="102" selection-start-column="109" selection-end-line="102" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/view/updateExpert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="62" selection-start-line="62" selection-end-line="66" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -768,38 +699,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/view/updateExpert.html">
+    <entry file="file://$PROJECT_DIR$/app/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="62" selection-start-line="62" selection-end-line="66" selection-end-column="30" />
+        <state relative-caret-position="11949">
+          <caret line="1151" column="9" selection-start-line="1151" selection-start-column="9" selection-end-line="1151" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/view/modalContent.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/expert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/view/profileExpert.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="290">
+          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.js">
+    <entry file="file://$PROJECT_DIR$/public/view/patient.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="1151" column="9" selection-start-line="1151" selection-start-column="9" selection-end-line="1151" selection-end-column="9" />
+        <state relative-caret-position="2405">
+          <caret line="155" column="26" lean-forward="true" selection-start-line="155" selection-start-column="26" selection-end-line="155" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/expert.js">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/view/expert.html">
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/PatientCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="102" column="109" lean-forward="true" selection-start-line="102" selection-start-column="109" selection-end-line="102" selection-end-column="109" />
+        <state relative-caret-position="109">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/singleCenter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="58" selection-start-column="58" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/profilePatient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/view/profilePatient.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
         </state>
       </provider>
     </entry>
