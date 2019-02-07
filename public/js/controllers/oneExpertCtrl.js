@@ -178,7 +178,7 @@ app.controller('ProfileExpertController', function ($scope, $http, $location, $l
             .then(function(res) {
                 // var arr=[];
                 $scope.anketa=res.data;
-                console.log(res.data,"llaaa")
+                console.log( $scope.anketa,"llaaa")
 
             })
     }

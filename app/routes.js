@@ -597,6 +597,23 @@ module.exports = function(app) {
 
     });
 
+    app.get('/centerExpert', function (req, res) {
+        console.log(req.body.id,'b@');
+        var id = req.body.id;
+        Expert.find({centre: id}, function (err, centres) {
+            if (err)
+                for (var key in centres) {
+                    console.log(centres[key], "helloooooooooooo");
+
+                }
+
+            res.send(centres);
+
+        });
+
+    });
+
+
 
 
 

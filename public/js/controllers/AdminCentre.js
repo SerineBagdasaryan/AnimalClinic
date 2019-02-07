@@ -129,16 +129,37 @@ app.controller('DirectorController', function ($scope, $http, $location, $log, $
         id: $scope.id
     }
 
-    var s;
-    var objo;
+
+
     $http.post('/centerExpert',obj)
         .then(function (res) {
             $scope.experts=res.data;
+            for(var i in $scope.experts){
+                console.log($scope.experts[i]._id,"hop")
+            }
+
+
+
+            $http.get('/find_patient')
+                .then(function (res) {
+                    $scope.patients=res.data;
+                    console.log($scope.experts[i]._id,"ex");
+                    // for (var  i in $scope.patients)
+                    // console.log($scope.patients[i].expert);
+                    // if($scope.patients[i].expert==$scope.experts[i]._id){
+                    //     console.log($scope.experts[i]._id,"ex");
+                    // }
+                    //     // else {
+                    //     console.log('chexav');
+                    // }
+
+                })
         })
     $http.get("/centres/" + $scope.id)
         .then(function(response) {
             $scope.data = response.data;
-            console.log( $scope.data.centreName,"go")
+            console.log( $scope.data.centreName,"go");
+
             (function(){
             var element = function(id){
                 return document.getElementById(id);

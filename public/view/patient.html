@@ -130,7 +130,12 @@
                                         <input type="password" class="form-control input-lg text-center" placeholder="Enter Your password" ng-model="patient.password">
                                         <span class="err" style="color: red">{{errors.passwordErr}}</span>
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <!--<div class="form-group col-md-6" >-->
+                                        <!--<label>Centre</label>-->
+                                        <!--<select style="width: 100%; height: 52px"  ng-model="patient.centre" ng-options="  user._id as user.centreName for user in centres" ng-selected="choose(patient.centre)"></select>-->
+                                        <!--&lt;!&ndash;<span class="err" style="color: red">{{errors.expertErr}}</span>&ndash;&gt;-->
+                                    <!--</div>-->
+                                    <div class="form-group col-md-6" >
                                         <label>Expert</label>
                                         <select style="width: 100%; height: 52px" ng-model="patient.expert" ng-options="  user._id as user.firstname + ' ' + user.lastname for user in experts"></select>
                                         <span class="err" style="color: red">{{errors.expertErr}}</span>

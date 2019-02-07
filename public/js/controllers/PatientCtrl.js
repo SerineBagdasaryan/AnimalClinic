@@ -1,12 +1,31 @@
 app.controller('PatientController', function ($scope, $http, $location, $log, $window, $rootScope) {
-    $( function() {
-        $( "#datepicker" ).datepicker();
-    } );
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+    // $http.get('/find_centers')
+    //     .then(function (result) {
+    //         $scope.centres = result.data;
+    //         console.log($scope.centres);
+    //         // $scope.choose = function (id) {
+    //         //     $scope.id = id;
+    //         //     console.log("gjot", $scope.id);
+    //         //
+    //         // }
+    //     })
+    // $http.get('/centerExpert', $scope.id)
+    //     .then(function (res) {
+    //         $scope.experts = res.data;
+    //         console.log($scope.experts);
+    //     })
+
+
     $http.get('/find_experts')
         .then(function (result) {
             $scope.experts = result.data;
             console.log($scope.experts);
         })
+
+
 
     var formData
     $scope.addPatient = function () {
@@ -14,19 +33,20 @@ app.controller('PatientController', function ($scope, $http, $location, $log, $w
         // console.log($scope.expert);
 
         formData = new FormData;
-        for (var key in $scope.patient){
-            formData.append(key,$scope.patient[key]);
+        for (var key in $scope.patient) {
+            formData.append(key, $scope.patient[key]);
         }
 
-        var file=$("#patientImage")[0].files[0];
-        formData.append("image",file);
+        var file = $("#patientImage")[0].files[0];
+        formData.append("image", file);
 
-        $http.post('/patientsInsert',formData,{
-            transformRequest:angular.identity,
-            headers:{
-                'Content-Type':undefined
-            }}).then(function(res){
-            $scope.errors=res.data;
+        $http.post('/patientsInsert', formData, {
+            transformRequest: angular.identity,
+            headers: {
+                'Content-Type': undefined
+            }
+        }).then(function (res) {
+            $scope.errors = res.data;
 
         });
 
@@ -44,12 +64,12 @@ app.controller('PatientController', function ($scope, $http, $location, $log, $w
         var data = $scope.check;
 
         $http.post(url, data)
-            .then(function(httpRequest) {
+            .then(function (httpRequest) {
 
                 $scope.patients = httpRequest.data;
                 // console.log($scope.centres);
 
-                if($scope.patients.success == true){
+                if ($scope.patients.success == true) {
                     $scope.href = $scope.patients.href
                     var url = "http://" + $window.location.host + `#!profilePatient/?${$scope.href}`;
                     console.log(url);
@@ -65,6 +85,5 @@ app.controller('PatientController', function ($scope, $http, $location, $log, $w
             });
 
     }
-
 });
 
