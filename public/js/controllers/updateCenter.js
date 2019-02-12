@@ -4,7 +4,7 @@ app.controller('UpdateCenterController', function ($scope,$http,$location) {
 console.log(page,"gt")
     $http.get('/centres/'+page)
         .then(function (res) {
-                $scope.object =res.data;
+               $scope.object =res.data;
                $scope.name=$scope.object.centreName;
                $scope.owner=$scope.object.centreOwnerName;
                $scope.email=$scope.object.centreEmail;
@@ -15,10 +15,27 @@ console.log(page,"gt")
               $scope.ownerPhone=$scope.object.centreOwnerPphone;
                $scope.file=$scope.object.image;
 
-                console.log( $scope.object.image,"bpoooo");
+                console.log( $scope.object.image,"cent");
 
 
 $scope.updateCenters=function () {
+    $scope.centre =
+        {
+            name : $scope.name,
+            owner : $scope.owner,
+            email : $scope.email,
+            ownerEmail : $scope.ownerEmail,
+            password : $scope.password,
+            address : $scope.address,
+            phone : $scope.phone,
+            ownerPhone : $scope.ownerPhone,
+            file : $scope.file,
+        };
+    console.log($scope.centre);
+
+
+
+
     var formData;
     formData = new FormData;
     for (var key in $scope.centre){
