@@ -13,7 +13,7 @@ console.log(page,"gt")
                $scope.address=$scope.object.centreAddress;
                $scope.phone=$scope.object.centrePphone;
               $scope.ownerPhone=$scope.object.centreOwnerPphone;
-               $scope.file=$scope.object.image;
+               $scope.image=$scope.object.image;
 
                 console.log( $scope.object.image,"cent");
 

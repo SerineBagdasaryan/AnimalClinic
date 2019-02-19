@@ -1,4 +1,13 @@
 
+.card1 {
+    overflow: scroll;
+    height: 110px;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: box-shadow .3s ease-in-out;
+}
 
 .app {
     max-width: 500px;

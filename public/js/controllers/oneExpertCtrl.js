@@ -17,7 +17,7 @@ app.controller('ProfileExpertController', function ($scope, $http, $location, $l
                     $scope.d = res.data
                     console.log( $scope.d.centreName,"y");
 
-                })
+
 
             (function(){
                 var element = function(id){
@@ -94,7 +94,7 @@ app.controller('ProfileExpertController', function ($scope, $http, $location, $l
                 }
 
             })();
-
+                })
         })
 
     // //	Image

@@ -21,8 +21,6 @@ app.controller('ProfilePatientController', function ($scope, $http, $location, $
                             $scope.singleCenter=res.data;
                             console.log('hyhyhy', $scope.singleCenter );
 
-                        })
-                })
 
                 (function(){
                     var element = function(id){
@@ -99,6 +97,8 @@ app.controller('ProfilePatientController', function ($scope, $http, $location, $
                     }
 
                 })();
+                        })
+                })
 
         })
 

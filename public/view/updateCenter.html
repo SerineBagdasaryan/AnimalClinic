@@ -60,7 +60,7 @@
                 </div>
                 <label>Picture</label>
                 <div class="form-group">
-                    <input type="file"   id="centreImage" class="form-control input-md text-center" name="file_upload">
+                    <input type="file" ng-model="image"  id="centreImage" class="form-control input-md text-center" name="file_upload">
                     <!--<span class="err" style="color: red">{{errors.originalnameErr}}</span>-->
                 </div>
                 <button type="button" class="btn btn-md mt-1 "  ng-click="updateCenters()" style="background-color: #00bfff">Send</button>
